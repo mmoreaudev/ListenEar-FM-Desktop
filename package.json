@@ -1,0 +1,90 @@
+{
+  "name": "listenear-fm-electronjs",
+  "version": "2.0.5",
+  "description": "Desktop Application for ListenEar FM",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmoreaudev/ListenEar-FM-ElectronJS.git"
+  },
+  "author": "mmoreaudev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mmoreaudev/ListenEar-FM-ElectronJS/issues"
+  },
+  "homepage": "https://github.com/mmoreaudev/ListenEar-FM-ElectronJS#readme",
+  "scripts": {
+    "electron": "electron .",
+    "start": "./node_modules/.bin/electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "build": "./node_modules/.bin/electron-builder build",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "devDependencies": {
+    "electron": "~1.7.12",
+    "electron-builder": "^19.55.3"
+  },
+  "dependencies": {},
+  "files": [
+    "*.js",
+    "src",
+    "node_modules"
+  ],
+  "build": {
+    "appId": "com.mateomoreau.listenearfm.desktop",
+    "productName": "ListenEar FM",
+    "copyright": "Copyright © 2023 Matéo Moreau (mateomoreau.com)",
+    "mac": {
+      "category": "public.app-category.audio",
+      "target": [
+        {
+          "target": "dmg"
+        },
+        {
+          "target": "mas"
+        }
+      ],
+      "icon": "build/icon.icns"
+    },
+    "dmg": {},
+    "mas": {},
+    "win": {
+      "target": [
+        {
+          "target": "appx"
+        },
+        {
+          "target": "portable"
+        }
+      ],
+      "icon": "build/icon.ico",
+      "legalTrademarks": "Copyright © 2023 Matéo Moreau (mateomoreau.com)",
+      "publisherName": "Matéo Moreau"
+    },
+    "appx": {
+      "applicationId": "mmoreaudev.ListenEarFM",
+      "backgroundColor": "#262626",
+      "displayName": "ListenEar FM",
+      "identityName": "22127mmoreaudev.ListenEarFM",
+      "publisher": "CN=84B32E2F-0B83-4D35-8A43-109EF795E8E1",
+      "publisherDisplayName": "Matéo Moreau (mateomoreau.com)",
+      "languages": [
+        "fr"
+      ]
+    },
+    "portable": {},
+    "linux": {
+      "target": [
+        {
+          "target": "AppImage"
+        }
+      ],
+      "maintainer": "Matéo Moreau (mateomoreau.com)",
+      "vendor": "listen-ear-fm.vercel.app",
+      "synopsis": "ListenEar FM App",
+      "category": "Audio"
+    },
+    "appImage": {}
+  }
+}
